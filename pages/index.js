@@ -13,6 +13,7 @@ const Banner = dynamic(() => import("../components/banner"));
 export default function Home({ country }) {
   const { data: trendingProductData } = useFetch('https://api.spotsaas.com/home/quick-link', country)
   const { data: data } = useFetch('https://api.spotsaas.com/product/home-page', country)
+  const { data: datax } = useFetch('http://api.khata.cloud/test', country)
   const { data: CateData } = useFetch('https://api.spotsaas.com/category/home-page', country)
   const { data: PopularCate } = useFetch('https://api.spotsaas.com/home/popular-categories', country)
   const { data: recentlyAdded } = useFetch('https://api.spotsaas.com/product/home-page/recently-added', country)
